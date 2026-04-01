@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- JavaScript -->
+    <script src="scripts/jquery-4.0.0.min.js" defer></script>
+    <script src="scripts/functions.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+    <title>Hangman Project | Joyce Sheffield</title>
+  </head>
+  <body class="montserrat-regular">
+    <div class="content-wrapper">
+      <nav class="site-navigation">
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#home" class="current-page">Home</a></li>
+            <li><a href="#project-container">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <header class="hero-content" id="home">
+        <div class="hero-text">
+          <h1 class="large-heading">
+            <span class="large-heading-accent">Hangman Game</span>
+          </h1>
+          <h2 class="small-heading" id="user-name">Joyce Sheffield</h2>
+          <p id="user-message"></p>
+        </div>
+        <div></div>
+      </header>
+      <main class="main-content">
+        <div class="project-container" id="project-container">
+          <section class="projects" id="projects">
+            <div class="project-card hangman">
+              <div id="hangman-container">
+                <button id="play-button">Play Game</button>
+                <div id="hangman-image-container">
+                  <img src="images/rocket_start_screen.png" alt="Start screen for hangman game featuring a rocket ship on a launch pad" id="hangman-image" />
+                </div>
+                <div id="letter-container"></div>
+                <div id="guesses-left"></div>
+                <div id="hint"></div>
+                <div id="hangman-controls">
+                  <form action="#">
+                    <label for="guess-input">Guess a letter: </label>
+                    <input type="text" name="guess" id="guess-input" />
+                    <button class="buttons" id="guess-button">Submit Guess</button>
+                  </form>
+                  <div class="game-controls">
+                    <button class="buttons" id="hint-button">Get Hint</button>
+                    <button class="buttons" id="reset-button">Reset Game</button>
+                    <button class="buttons" id="quit-button">Quit Game</button>
+                  </div>
+                  <div class="hangman-btns">
+                    <div>
+                      <button class="buttons key-button" id="btn-q">Q</button>
+                      <button class="buttons key-button" id="btn-w">W</button>
+                      <button class="buttons key-button" id="btn-e">E</button>
+                      <button class="buttons key-button" id="btn-r">R</button>
+                      <button class="buttons key-button" id="btn-t">T</button>
+                      <button class="buttons key-button" id="btn-y">Y</button>
+                      <button class="buttons key-button" id="btn-u">U</button>
+                      <button class="buttons key-button" id="btn-i">I</button>
+                      <button class="buttons key-button" id="btn-o">O</button>
+                      <button class="buttons key-button" id="btn-p">P</button>
+                    </div>
+                    <div>
+                      <button class="buttons key-button" id="btn-a">A</button>
+                      <button class="buttons key-button" id="btn-s">S</button>
+                      <button class="buttons key-button" id="btn-d">D</button>
+                      <button class="buttons key-button" id="btn-f">F</button>
+                      <button class="buttons key-button" id="btn-g">G</button>
+                      <button class="buttons key-button" id="btn-h">H</button>
+                      <button class="buttons key-button" id="btn-j">J</button>
+                      <button class="buttons key-button" id="btn-k">K</button>
+                      <button class="buttons key-button" id="btn-l">L</button>
+                    </div>
+                    <div>
+                      <button class="buttons key-button" id="btn-z">Z</button>
+                      <button class="buttons key-button" id="btn-x">X</button>
+                      <button class="buttons key-button" id="btn-c">C</button>
+                      <button class="buttons key-button" id="btn-v">V</button>
+                      <button class="buttons key-button" id="btn-b">B</button>
+                      <button class="buttons key-button" id="btn-n">N</button>
+                      <button class="buttons key-button" id="btn-m">M</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="main-footer">
+        <div class="copy">
+          <p>Joyce Sheffield &copy; 2026.</p>
+        </div>
+      </footer>
+      <section id="results-pop-up">
+        <h2 id="result-title" class="large-heading-accent">You Win!</h2>
+        <div id="results-message">
+          <p>Total Wins: <span id="total-wins">0</span></p>
+          <p>Total Losses: <span id="total-losses">0</span></p>
+          <p>Total Games: <span id="total-games">0</span></p>
+        </div>
+        <div id="result-controls">
+          <button id="play-again-button">Play Again</button>
+          <button id="quit-game-button">Quit Game</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
