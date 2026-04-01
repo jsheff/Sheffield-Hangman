@@ -1,0 +1,12 @@
+/*
+SASS mxins
+*/
+// @mixin rounded-box($xoffset, $yoffset, $rounded-corners, $border-color){  
+//     border-radius:$rounded-corners;    
+//     border:3px solid $border-color;    
+// }
+@mixin flex-centered-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

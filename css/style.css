@@ -313,3 +313,98 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+/* Typography
+--------------------------------------------- */
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Elements
+--------------------------------------------- */
+.content-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f0f1f2;
+  background-color: #293a4a;
+  height: 100%;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 1px dotted;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+h1 .large-heading,
+h2 .large-heading,
+h3 .large-heading {
+  font-size: 2rem;
+}
+
+.large-heading-accent {
+  color: #bf463b;
+}
+
+button,
+.btn-control {
+  background-color: #f2c744;
+  color: #4f6f8c;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin: 0.2em;
+}
+button:hover,
+.btn-control:hover {
+  background-color: #f5d269;
+  color: white;
+}
+button.disabled,
+.btn-control.disabled {
+  background-color: #fae9b4;
+  color: #4f6f8c;
+  cursor: default;
+}
+
+.hero-text {
+  padding-bottom: 2rem;
+}
