@@ -14,8 +14,11 @@
 --------------------------------------------- */
 
 .content-wrapper {
-  max-width: 90%;
+  min-width: 350px;
+  width: 100%;
   margin: 0 auto;
+  height: 100%;
+  position: relative;
 }
 
 body {
@@ -91,6 +94,6 @@ button,
 }
 
 .hero-text {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 

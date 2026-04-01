@@ -23,6 +23,9 @@ function startGame(data) {
 function submitGuess(event) {
   event.preventDefault();
 
+  // set focus back to the input field
+  $guessInput.focus();
+
   // check if the input field is a letter and not empty
   if ($guessInput.val().length === 0 || !regexObject.test($guessInput.val())) {
     $guessInput.val("");
@@ -68,9 +71,6 @@ function submitGuess(event) {
 
       // update the number of guesses left
       $guessesLeft.text("Guesses left: " + userGuessesLeft);
-
-      // set focus back to the input field
-      $guessInput.focus();
     }
 
     // check if player has won

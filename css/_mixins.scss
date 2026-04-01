@@ -8,7 +8,7 @@
 
 @use "variables" as v;
 
-@mixin flex-centered-row {
+@mixin flex-centered {
     display: flex;
     justify-content: center;
     align-items: center;

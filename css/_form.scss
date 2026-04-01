@@ -1,14 +1,13 @@
 /* Form
 --------------------------------------------- */
+@use "mixins" as m;
 
 form {
   line-height: 2rem;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  @include m.flex-centered;
+  gap: 0.5rem;
 }
 
 .form-label {

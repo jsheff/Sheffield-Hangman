@@ -328,8 +328,11 @@ html {
 /* Elements
 --------------------------------------------- */
 .content-wrapper {
-  max-width: 90%;
+  min-width: 350px;
+  width: 100%;
   margin: 0 auto;
+  height: 100%;
+  position: relative;
 }
 
 body {
@@ -408,7 +411,7 @@ button:disabled,
 }
 
 .hero-text {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 /* Nav
@@ -453,7 +456,7 @@ button:disabled,
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .hero-content .small-heading,
@@ -487,14 +490,19 @@ Hangman
 #hangman-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
   background-color: black;
   border: 2px solid #bf463b;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#hangman-display {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  justify-content: center;
   align-items: center;
-  padding-top: 1rem;
+  gap: 1rem;
+  flex-direction: column;
 }
 
 #hangman-image-container {
@@ -514,7 +522,6 @@ Hangman
   align-items: center;
   gap: 1rem;
   flex-direction: column;
-  width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
@@ -527,7 +534,7 @@ Hangman
   align-items: center;
 }
 
-.key-btn {
+.key-button {
   width: 1.5rem;
   line-height: 1rem;
   font-size: 0.7rem;
@@ -536,7 +543,7 @@ Hangman
 #letter-container {
   display: flex;
   gap: 0.5em;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 #letter-container .letter {
@@ -546,14 +553,16 @@ Hangman
 
 #results-pop-up {
   display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  font-size: 1rem;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #293a4a;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   text-align: center;
+  width: clamp(250px, 50%, 400px);
 }
 
 /* Form
@@ -566,6 +575,7 @@ form {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  gap: 0.5rem;
 }
 
 .form-label {
@@ -616,8 +626,38 @@ select {
     line-height: 1rem;
     font-size: 1rem;
   }
-  #hangman-container,
+  #letter-container {
+    display: flex;
+    gap: 0.5em;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  #letter-container .letter {
+    border: 1px solid #bf463b;
+    padding: 0.5em;
+  }
+}
+@media (min-width: 992px) {
+  #hangman-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   #hangman-controls {
-    width: 80%;
+    font-size: 1.5rem;
+  }
+  .key-button {
+    width: 2rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  #hangman-controls {
+    font-size: 1.75rem;
+  }
+  .key-button {
+    width: 2.5rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
   }
 }
