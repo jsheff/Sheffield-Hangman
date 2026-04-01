@@ -544,6 +544,18 @@ Hangman
   padding: 0.5em;
 }
 
+#results-pop-up {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #293a4a;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
 /* Form
 --------------------------------------------- */
 form {

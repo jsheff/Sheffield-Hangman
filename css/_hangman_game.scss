@@ -66,3 +66,15 @@ Hangman
     padding: .5em;
   }
 }
+
+#results-pop-up {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: v.$bg-color-dark;
+  padding: 2rem;
+  border-radius: .5rem;
+  text-align: center;
+  }

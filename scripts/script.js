@@ -50,7 +50,7 @@ $quitGameButton.on("click", function () {
 /* Initial Setup */
 
 // hide the results pop-up
-$resultsPopUp.hide();
+//$resultsPopUp.hide();
 
 // disable the buttons until the game starts
 disableButtons();

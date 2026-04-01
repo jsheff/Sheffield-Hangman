@@ -23,6 +23,12 @@ function startGame(data) {
 function submitGuess(event) {
   event.preventDefault();
 
+  // check if the input field is a character
+  if ($guessInput.val().length === 0 || !/^[a-zA-Z]$/.test($guessInput.val())) {
+    $guessInput.val("");
+    return;
+  }
+
   const guess = $guessInput.val().toUpperCase();
   // clear the input field
   $guessInput.val("");
@@ -59,7 +65,12 @@ function submitGuess(event) {
           currentRocketShipImageNumber +
           rocketShipImageExtension,
       );
+
+      // update the number of guesses left
       $guessesLeft.text("Guesses left: " + userGuessesLeft);
+
+      // set focus back to the input field
+      $guessInput.focus();
     }
 
     // check if player has won
@@ -75,24 +86,18 @@ function submitGuess(event) {
     // check if player has lost
     if (userGuessesLeft === 0) {
       disableButtons();
-      let timeout = setTimeout(function () {}, 100);
-
-      // show rocket ship animation
-      $hangmanImage.attr(
-        "src",
-        rocketShipImageURL +
-          ++currentRocketShipImageNumber +
-          rocketShipImageExtension,
-      );
-      xposition = $hangmanImage.offset().left;
-      yposition = $hangmanImage.offset().top;
-      animationHandler = requestAnimationFrame(moveRocketShip);
 
       $resultTitle.text("You Lose!");
       $resultsMessage.text(
         `The correct word is ${word}. Would you like to try again?`,
       );
-      //$resultsPopUp.show();
+      // $resultsPopUp.offset({
+      //   top: $(window).height() / 2 - $resultsPopUp.height() / 2,
+      // });
+      $resultsPopUp.show();
+
+      // show rocket ship animation
+      setTimeout(rocketShipAnimation, 1000);
     }
   }
 }
@@ -119,13 +124,25 @@ function enableButtons() {
   $quitButton.prop("disabled", false);
 }
 
+function rocketShipAnimation() {
+  $hangmanImage.attr(
+    "src",
+    rocketShipImageURL +
+      ++currentRocketShipImageNumber +
+      rocketShipImageExtension,
+  );
+  xposition = $hangmanImage.offset().left;
+  yposition = $hangmanImage.offset().top;
+  animationHandler = requestAnimationFrame(moveRocketShip);
+}
+
 function moveRocketShip() {
   if (yposition + $hangmanImage.height() < 0) {
     cancelAnimationFrame(animationHandler);
-    $resultsPopUp.show();
     return;
   } else {
     yposition -= 2;
+    xposition += 2;
     $hangmanImage.offset({ top: yposition, left: xposition });
     //.offset({ top: 10, left: 30 });
     // request next animation frame
