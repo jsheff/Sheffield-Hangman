@@ -1,0 +1,24 @@
+/*
+SASS variables
+*/
+$text_color: #f0f1f2;
+$bg-color-dark: #293a4a;
+$primary_color: #f2c744;
+$secondary_color: #bf463b;
+$tertiary-color: #4f6f8c;
+$acent-color: #bbd8f2;
+$btn-hover: #f5d269;
+$btn-disabled: #fae9b4;
+
+/*
+SASS maps 
+*/
+$font-sizes: (
+  small: 0.9rem,
+  medium: 1rem,
+  large: 1.2rem  
+);
+$font-weights:(
+    normal:500,
+    bold:800
+);

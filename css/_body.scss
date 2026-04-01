@@ -1,0 +1,96 @@
+@use "variables" as v;
+
+/* Typography
+--------------------------------------------- */
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Elements
+--------------------------------------------- */
+
+.content-wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: v.$text_color;
+  background-color: v.$bg-color-dark;
+  height: 100%;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 1px dotted;
+}
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  .large-heading {
+    font-size: 2rem;
+  }
+}
+
+.large-heading-accent {
+  color: v.$secondary-color;
+}
+
+button,
+.btn-control {
+  background-color: v.$primary-color;
+  color: v.$tertiary-color;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin: 0.2em;
+  &:hover {
+    background-color: v.$btn-hover;
+    color: white;
+  }
+  &.disabled {
+    background-color: v.$btn-disabled;
+    color: v.$tertiary-color;
+    cursor: default;
+  }
+}
+
+.hero-text {
+  padding-bottom: 2rem;
+}
+
