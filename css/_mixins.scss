@@ -5,8 +5,15 @@ SASS mxins
 //     border-radius:$rounded-corners;    
 //     border:3px solid $border-color;    
 // }
+@use "variables" as v;
+
 @mixin flex-centered-row {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+
+@mixin project-border {
+    border: 2px solid v.$secondary_color;
 }

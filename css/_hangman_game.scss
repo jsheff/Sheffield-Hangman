@@ -1,23 +1,21 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 /*
 Hangman
 --------------------------------------------- */
-/*
+
 .hangman {
-  display: flex;
+  @include m.flex-centered-row;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
 }
 
 #hangman-container {
+  position: relative;
   width: 100%;
   aspect-ratio: 4/3;
   background-color: black;
-  border: #bf463b solid 2px;
-  position: relative;
+  @include m.project-border;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -25,19 +23,22 @@ Hangman
   padding-top: 1rem;
 }
 
+#hangman-image-container {
+  width: 50%;
+  aspect-ratio: 1/1;
+}
+
 #hangman-controls {
-  display: flex;
-  width: 100%;
+  @include m.flex-centered-row;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  border: #bf463b solid 2px;
-  gap: 1rem;
+  @include m.project-border;
 }
 
-.hangman-btns {
+.hangman-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,20 +48,6 @@ Hangman
   width: 1.5rem;
   line-height: 1rem;
   font-size: .7rem;
-}
-
-button:disabled {
-  background-color: v.$btn-disabled;
-  color: v.$tertiary-color;
-}
-
-#hangman-img-container {
-  width: 50%;
-  aspect-ratio: 1/1;
-}
-
-#control-keys {
-  max-width: 150px;
 }
 
 #letter-container {
@@ -73,5 +60,3 @@ button:disabled {
     padding: .5em;
   }
 }
-
-*/

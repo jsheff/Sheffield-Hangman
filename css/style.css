@@ -454,6 +454,7 @@ button.disabled,
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  gap: 1rem;
 }
 
 .hero-content .small-heading,
@@ -471,6 +472,71 @@ footer {
 
 .copy {
   text-align: center;
+}
+
+/*
+Hangman
+--------------------------------------------- */
+.hangman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+#hangman-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-color: black;
+  border: 2px solid #bf463b;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+#hangman-image-container {
+  width: 50%;
+  aspect-ratio: 1/1;
+}
+
+#hangman-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #bf463b;
+}
+
+.hangman-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.key-btn {
+  width: 1.5rem;
+  line-height: 1rem;
+  font-size: 0.7rem;
+}
+
+#letter-container {
+  display: flex;
+  gap: 0.5em;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#letter-container .letter {
+  border: 1px solid #bf463b;
+  padding: 0.5em;
 }
 
 /* Form
