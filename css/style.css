@@ -649,6 +649,9 @@ select {
     border: 1px solid #bf463b;
     padding: 0.5em;
   }
+  #play-button {
+    font-size: 2rem;
+  }
 }
 @media (min-width: 992px) {
   #hangman-container {
