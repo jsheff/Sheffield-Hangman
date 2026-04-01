@@ -30,6 +30,7 @@ const rocketShipImageURL = "images/rocket_ship_";
 const rocketShipImageExtension = ".png";
 const maxGuesses = 6;
 const maxWords = 100;
+const letterRegEx = /^[a-zA-Z]$/;
 
 /* Variables */
 
@@ -49,3 +50,5 @@ let currentRocketShipImageNumber = 0;
 let animationHandler;
 let xposition = 0;
 let yposition = 0;
+
+let regexObject = RegExp(letterRegEx);

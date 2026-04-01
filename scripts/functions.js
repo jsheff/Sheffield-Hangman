@@ -23,8 +23,8 @@ function startGame(data) {
 function submitGuess(event) {
   event.preventDefault();
 
-  // check if the input field is a character
-  if ($guessInput.val().length === 0 || !/^[a-zA-Z]$/.test($guessInput.val())) {
+  // check if the input field is a letter and not empty
+  if ($guessInput.val().length === 0 || !regexObject.test($guessInput.val())) {
     $guessInput.val("");
     return;
   }
