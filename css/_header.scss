@@ -1,0 +1,14 @@
+/* Header
+--------------------------------------------- */
+@use "mixins";
+
+.hero-content {
+  @include mixins.flex-centered-row;
+}
+
+.hero-content {
+  .small-heading,
+  .large-heading {
+    text-align: center;
+  }
+}

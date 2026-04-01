@@ -3,7 +3,7 @@
 // import variable values
 @use "variables";
 // import mixins
-//@use "mixins";
+@use "mixins";
 
 // import css resets
 @use "normalize";
@@ -12,7 +12,7 @@
 // import section css
 @use "body";
 @use "nav";
-//@use "header";
+@use "header";
 //@use "footer";
 //@use "form";
 //@use "hangman_game";
