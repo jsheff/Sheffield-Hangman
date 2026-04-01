@@ -4,9 +4,8 @@ SASS variables
 /*
 SASS maps 
 */
-/*
-SASS mxins
-*/
+/* SASS mxins
+--------------------------------------------- */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -401,8 +400,8 @@ button:hover,
   background-color: #f5d269;
   color: white;
 }
-button.disabled,
-.btn-control.disabled {
+button:disabled,
+.btn-control:disabled {
   background-color: #fae9b4;
   color: #4f6f8c;
   cursor: default;

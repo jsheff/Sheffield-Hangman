@@ -83,7 +83,7 @@ button,
     background-color: v.$btn-hover;
     color: white;
   }
-  &.disabled {
+  &:disabled {
     background-color: v.$btn-disabled;
     color: v.$tertiary-color;
     cursor: default;

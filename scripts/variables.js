@@ -14,10 +14,11 @@ const $quitGameButton = $("#quit-game-button");
 const $resultTitle = $("#result-title");
 const $resultsMessage = $("#results-message");
 
+const $hangmanContainer = $("#hangman-container");
+const $hangmanImageContainer = $("#hangman-image-container");
 const $letters = $("#letter-container");
 const $guessesLeft = $("#guesses-left");
 const $hint = $("#hint");
-const $hangmanImageContainer = $("#hangman-image-container");
 
 const $guessInput = $("#guess-input");
 
@@ -31,9 +32,11 @@ const maxWords = 100;
 
 let wordList;
 let userGuesses = 0;
+let userGuessesLeft = maxGuesses;
 let word = "";
 let hint = "";
 let letterArray = [];
 let displayedLetters = [];
 let guessedLetters = [];
 let randomNumber;
+let html = "";

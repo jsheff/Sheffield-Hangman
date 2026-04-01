@@ -1,10 +1,11 @@
-/*
-SASS mxins
-*/
+/* SASS mxins
+--------------------------------------------- */
+
 // @mixin rounded-box($xoffset, $yoffset, $rounded-corners, $border-color){  
 //     border-radius:$rounded-corners;    
 //     border:3px solid $border-color;    
 // }
+
 @use "variables" as v;
 
 @mixin flex-centered-row {
