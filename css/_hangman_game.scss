@@ -1,0 +1,77 @@
+@use "variables" as v;
+
+/*
+Hangman
+--------------------------------------------- */
+/*
+.hangman {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#hangman-container {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-color: black;
+  border: #bf463b solid 2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+#hangman-controls {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border: #bf463b solid 2px;
+  gap: 1rem;
+}
+
+.hangman-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.key-btn {
+  width: 1.5rem;
+  line-height: 1rem;
+  font-size: .7rem;
+}
+
+button:disabled {
+  background-color: v.$btn-disabled;
+  color: v.$tertiary-color;
+}
+
+#hangman-img-container {
+  width: 50%;
+  aspect-ratio: 1/1;
+}
+
+#control-keys {
+  max-width: 150px;
+}
+
+#letter-container {
+  display: flex;
+  gap: .5em;
+  font-size: 2rem;
+  font-weight: bold;
+  .letter {
+    border: 1px solid #bf463b;
+    padding: .5em;
+  }
+}
+
+*/
