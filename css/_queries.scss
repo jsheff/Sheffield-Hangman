@@ -52,28 +52,27 @@
 }
 
 @media (min-width: 992px) {
-    #hangman-container {
+  #hangman-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-#hangman-controls {
-  font-size: 1.5rem;
-}
-.key-button {
-  width: 2rem;
-  line-height: 1.5rem;
-  font-size: 1rem;
-}
+  }
+  #hangman-controls {
+    font-size: 1.5rem;
+  }
+  .key-button {
+    width: 2rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1200px) {
-
-#hangman-controls {
-  font-size: 1.75rem;
-}
-.key-button {
-  width: 2.5rem;
-  line-height: 2rem;
-  font-size: 1.5rem;
-}
+  #hangman-controls {
+    font-size: 1.75rem;
+  }
+  .key-button {
+    width: 2.5rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
 }

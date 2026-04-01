@@ -1,9 +1,9 @@
 /* Header
 --------------------------------------------- */
-@use "mixins";
+@use "mixins" as m;
 
 .hero-content {
-  @include mixins.flex-centered;
+  @include m.flex-centered;
   gap: 0.5rem;
 }
 
