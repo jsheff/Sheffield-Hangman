@@ -1,0 +1,42 @@
+@use "variables" as v;
+
+/* Nav
+--------------------------------------------- */
+
+.site-navigation {
+  font-size: 0.75rem;
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    padding-inline-start: 0;
+    display: flex;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  a {
+    color: v.$text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.2em 1em;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: v.$text-color;
+      color: v.$primary-color;
+    }
+  }
+}
+
+.current-page {
+  border-bottom: v.$secondary-color 1px solid;
+}

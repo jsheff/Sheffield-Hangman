@@ -11,11 +11,11 @@
 
 // import section css
 @use "body";
-//@use "nav";
+@use "nav";
 //@use "header";
 //@use "footer";
 //@use "form";
 //@use "hangman_game";
 
 // import media queries
-//@use "queries";
+@use "queries";

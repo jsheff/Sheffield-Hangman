@@ -1,0 +1,48 @@
+/* Media Queries
+--------------------------------------------- */
+
+@media (min-width: 600px) {
+  h1, h2, h3{
+    .large-heading {
+      font-size: 2.4rem;
+    }
+    .small-heading {
+      font-size: 1.6rem;
+    }
+  }
+  .site-navigation {
+    height: 10vh;
+    font-size: 1.25rem;
+  }
+  .nav-menu a {
+    font-weight: 600;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  h1, h2, h3{
+    .large-heading {
+      font-size: 3rem;
+    }
+    .small-heading,
+    .medium-heading {
+      font-size: 2.4rem;
+    }
+  }
+  .key-btn {
+  width: 2rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  }
+  #hangman-container,
+  #hangman-controls {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}

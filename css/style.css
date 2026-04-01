@@ -408,3 +408,77 @@ button.disabled,
 .hero-text {
   padding-bottom: 2rem;
 }
+
+/* Nav
+--------------------------------------------- */
+.site-navigation {
+  font-size: 0.75rem;
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-menu ul {
+  padding-inline-start: 0;
+  display: flex;
+}
+.nav-menu ul li {
+  list-style-type: none;
+}
+.nav-menu a {
+  color: #f0f1f2;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.2em 1em;
+}
+.nav-menu a:hover, .nav-menu a:focus, .nav-menu a:active {
+  background-color: #f0f1f2;
+  color: #f2c744;
+}
+
+.current-page {
+  border-bottom: #bf463b 1px solid;
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media (min-width: 600px) {
+  h1 .large-heading, h2 .large-heading, h3 .large-heading {
+    font-size: 2.4rem;
+  }
+  h1 .small-heading, h2 .small-heading, h3 .small-heading {
+    font-size: 1.6rem;
+  }
+  .site-navigation {
+    height: 10vh;
+    font-size: 1.25rem;
+  }
+  .nav-menu a {
+    font-weight: 600;
+    padding: 10px 20px;
+  }
+}
+@media (min-width: 768px) {
+  h1 .large-heading, h2 .large-heading, h3 .large-heading {
+    font-size: 3rem;
+  }
+  h1 .small-heading,
+  h1 .medium-heading, h2 .small-heading,
+  h2 .medium-heading, h3 .small-heading,
+  h3 .medium-heading {
+    font-size: 2.4rem;
+  }
+  .key-btn {
+    width: 2rem;
+    line-height: 1rem;
+    font-size: 1rem;
+  }
+  #hangman-container,
+  #hangman-controls {
+    width: 80%;
+  }
+}
