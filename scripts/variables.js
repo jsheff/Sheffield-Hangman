@@ -16,6 +16,7 @@ const $resultsMessage = $("#results-message");
 
 const $hangmanContainer = $("#hangman-container");
 const $hangmanImageContainer = $("#hangman-image-container");
+const $hangmanImage = $("#hangman-image");
 const $letters = $("#letter-container");
 const $guessesLeft = $("#guesses-left");
 const $hint = $("#hint");
@@ -25,6 +26,8 @@ const $guessInput = $("#guess-input");
 /* Constants */
 
 const wordFileURL = "data/words.json";
+const rocketShipImageURL = "images/rocket_ship_";
+const rocketShipImageExtension = ".png";
 const maxGuesses = 6;
 const maxWords = 100;
 
@@ -40,3 +43,9 @@ let displayedLetters = [];
 let guessedLetters = [];
 let randomNumber;
 let html = "";
+let currentRocketShipImageNumber = 0;
+
+// variable to store the animation handler for the rocket ship animation
+let animationHandler;
+let xposition = 0;
+let yposition = 0;

@@ -52,6 +52,13 @@ function submitGuess(event) {
     } else {
       //console.log("Wrong guess!");
       userGuessesLeft--;
+      currentRocketShipImageNumber++;
+      $hangmanImage.attr(
+        "src",
+        rocketShipImageURL +
+          currentRocketShipImageNumber +
+          rocketShipImageExtension,
+      );
       $guessesLeft.text("Guesses left: " + userGuessesLeft);
     }
 
@@ -68,12 +75,24 @@ function submitGuess(event) {
     // check if player has lost
     if (userGuessesLeft === 0) {
       disableButtons();
+      let timeout = setTimeout(function () {}, 100);
+
+      // show rocket ship animation
+      $hangmanImage.attr(
+        "src",
+        rocketShipImageURL +
+          ++currentRocketShipImageNumber +
+          rocketShipImageExtension,
+      );
+      xposition = $hangmanImage.offset().left;
+      yposition = $hangmanImage.offset().top;
+      animationHandler = requestAnimationFrame(moveRocketShip);
 
       $resultTitle.text("You Lose!");
       $resultsMessage.text(
         `The correct word is ${word}. Would you like to try again?`,
       );
-      $resultsPopUp.show();
+      //$resultsPopUp.show();
     }
   }
 }
@@ -98,4 +117,18 @@ function enableButtons() {
   $hintButton.prop("disabled", false);
   $resetButton.prop("disabled", false);
   $quitButton.prop("disabled", false);
+}
+
+function moveRocketShip() {
+  if (yposition + $hangmanImage.height() < 0) {
+    cancelAnimationFrame(animationHandler);
+    $resultsPopUp.show();
+    return;
+  } else {
+    yposition -= 2;
+    $hangmanImage.offset({ top: yposition, left: xposition });
+    //.offset({ top: 10, left: 30 });
+    // request next animation frame
+    requestAnimationFrame(moveRocketShip);
+  }
 }
