@@ -72,9 +72,9 @@ Hangman
 
 #results-pop-up {
   display: none;
-  position: fixed;
+  position: absolute;
   font-size: 1rem;
-  bottom: 0;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: v.$bg-color-dark;
