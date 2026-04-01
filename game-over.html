@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- JavaScript -->
+    <script src="scripts/jquery-4.0.0.min.js" defer></script>
+    <script src="scripts/variables.js" defer></script>
+    <script src="scripts/functions.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+    <title>Hangman Project | Joyce Sheffield</title>
+  </head>
+  <body class="montserrat-regular">
+    <div class="content-wrapper">
+      <nav class="site-navigation">
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#home" class="current-page">Home</a></li>
+            <li><a href="#project-container">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <header class="hero-content" id="home">
+        <div class="hero-text">
+          <h1 class="large-heading">
+            <span class="large-heading-accent">Rocket Ship Hangman</span>
+          </h1>
+        </div>
+      </header>
+      <main class="main-content">
+        <div class="project-container" id="project-container">
+          <section class="projects" id="projects">
+            <div class="project-card hangman">
+              <div id="game-over">
+                <h2>Game Over</h2>
+                <p>Thank you for playing!</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="main-footer">
+        <div class="copy">
+          <p>Joyce Sheffield &copy; 2026.</p>
+        </div>
+      </footer>
+      <section id="results-pop-up" class="project-card">
+        <h2 id="result-title" class="large-heading-accent">Play Game</h2>
+        <div id="results-message"></div>
+        <div id="result-controls">
+          <button id="play-again-button">Play Again</button>
+          <button id="quit-game-button">Quit Game</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

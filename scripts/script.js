@@ -31,9 +31,7 @@ $resetButton.on("click", function () {
 });
 
 $quitButton.on("click", function () {
-  let html =
-    '<h2 class="large-heading">Game Over</h2><p>Thank you for playing!</p>';
-  $hangmanContainer.html(html);
+  location.href = "game-over.html";
 });
 
 $playAgainButton.on("click", function () {
@@ -42,11 +40,8 @@ $playAgainButton.on("click", function () {
 });
 
 $quitGameButton.on("click", function () {
-  html = '<h2 class="large-heading">Game Over</h2>';
-  html += "<p>Thank you for playing!</p>";
-  $hangmanContainer.html(html);
   $resultsPopUp.hide();
-  location.href = "#hangman";
+  location.href = "game-over.html";
 });
 
 /* Initial Setup */

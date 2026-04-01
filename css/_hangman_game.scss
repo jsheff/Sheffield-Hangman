@@ -83,3 +83,14 @@ Hangman
   text-align: center;
   width: clamp(250px, 50%, 400px);
 }
+
+#game-over {
+  width: 50%;
+  background-color: black;
+  @include m.project-border;
+  padding: 1rem 0;
+  @include m.flex-centered;
+  flex-direction: column;
+  font-size: 2rem;
+}
+

@@ -565,6 +565,19 @@ Hangman
   width: clamp(250px, 50%, 400px);
 }
 
+#game-over {
+  width: 50%;
+  background-color: black;
+  border: 2px solid #bf463b;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
 /* Form
 --------------------------------------------- */
 form {
