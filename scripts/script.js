@@ -6,8 +6,6 @@ $playButton.on("click", function () {
   // hide the play button
   $playButton.hide();
 
-  location.href = "#hangman";
-
   /* Start the game by fetching the word JSON file */
   fetch(wordFileURL)
     .then(function (response) {
@@ -16,6 +14,7 @@ $playButton.on("click", function () {
       }
     })
     .then(function (data) {
+      $guessInput.focus();
       startGame(data);
     });
 });
