@@ -20,6 +20,14 @@ function startGame(data) {
   $guessesLeft.text("Guesses left: " + userGuessesLeft);
 }
 
+function submitKeyGuess(event) {
+  const guess = $(this).text().toUpperCase();
+  $(this).prop("disabled", true);
+  $guessInput.focus();
+  checkGuess(guess);
+  //console.log(guess);
+}
+
 function submitGuess(event) {
   event.preventDefault();
 
@@ -41,64 +49,69 @@ function submitGuess(event) {
     //.log("You already guessed that letter!");
     return;
   } else {
-    guessedLetters.push(guess);
-    $(`#btn-${guess.toLowerCase()}`).prop("disabled", true);
+    checkGuess(guess);
+  }
+}
 
-    // check if the guess is correct
-    let correctGuess = false;
-    for (let i = 0; i < letterArray.length; i++) {
-      if (letterArray[i] === guess) {
-        displayedLetters[i] = guess;
-        correctGuess = true;
-      }
+function checkGuess(guess) {
+  // add the guess to the guessed letters array and disable the corresponding key button
+  guessedLetters.push(guess);
+  $(`#btn-${guess.toLowerCase()}`).prop("disabled", true);
+
+  // check if the guess is correct
+  let correctGuess = false;
+  for (let i = 0; i < letterArray.length; i++) {
+    if (letterArray[i] === guess) {
+      displayedLetters[i] = guess;
+      correctGuess = true;
     }
-    if (correctGuess) {
-      //console.log("Correct guess!");
-      // display the blank spaces for the word
-      for (let i = 0; i < word.length; i++) {
-        $letters.children().eq(i).text(displayedLetters[i]);
-      }
-    } else {
-      //console.log("Wrong guess!");
-      userGuessesLeft--;
-      currentRocketShipImageNumber++;
-      $hangmanImage.attr(
-        "src",
-        rocketShipImageURL +
-          currentRocketShipImageNumber +
-          rocketShipImageExtension,
-      );
-
-      // update the number of guesses left
-      $guessesLeft.text("Guesses left: " + userGuessesLeft);
+  }
+  if (correctGuess) {
+    //console.log("Correct guess!");
+    // display the blank spaces for the word
+    for (let i = 0; i < word.length; i++) {
+      $letters.children().eq(i).text(displayedLetters[i]);
     }
+  } else {
+    //console.log("Wrong guess!");
+    userGuessesLeft--;
+    currentRocketShipImageNumber++;
+    $hangmanImage.attr(
+      "src",
+      rocketShipImageURL +
+        currentRocketShipImageNumber +
+        rocketShipImageExtension,
+    );
 
-    // check if player has won
-    if (displayedLetters.includes("-") === false) {
-      disableButtons();
-      $resultTitle.text("You Win!");
-      $resultsMessage.text(
-        `You guessed the word ${word} with ${userGuessesLeft} guesses left!`,
-      );
-      $resultsPopUp.show();
-    }
+    // update the number of guesses left
+    $guessesLeft.text("Guesses left: " + userGuessesLeft);
+  }
 
-    // check if player has lost
-    if (userGuessesLeft === 0) {
-      disableButtons();
+  // check if player has won
+  if (displayedLetters.includes("-") === false) {
+    disableButtons();
+    $resultTitle.text("You Win!");
+    $resultsMessage.text(
+      `You guessed the word ${word} with ${userGuessesLeft} guesses left!`,
+    );
+    $resultsPopUp.show();
+  }
 
-      $resultTitle.text("You Lose!");
-      $resultsMessage.text(
-        `The correct word is ${word}. Would you like to try again?`,
-      );
-      // $resultsPopUp.offset({
-      //   top: $(window).height() / 2 - $resultsPopUp.height() / 2,
-      // });
-      $resultsPopUp.show();
+  // check if player has lost
+  if (userGuessesLeft === 0) {
+    disableButtons();
 
-      // show rocket ship animation
-      setTimeout(rocketShipAnimation, 1000);
-    }
+    $resultTitle.text("You Lose!");
+    $resultsMessage.text(
+      `The correct word is ${word}. Would you like to try again?`,
+    );
+    // $resultsPopUp.offset({
+    //   top: $(window).height() / 2 - $resultsPopUp.height() / 2,
+    // });
+    $resultsPopUp.show();
+
+    // show rocket ship animation
+    setTimeout(rocketShipAnimation, 1000);
   }
 }
 

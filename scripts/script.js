@@ -19,6 +19,10 @@ $playButton.on("click", function () {
     });
 });
 
+$keyButtons.each(function () {
+  $(this).on("click", submitKeyGuess);
+});
+
 $guessButton.on("click", submitGuess);
 
 $hintButton.on("click", function () {
